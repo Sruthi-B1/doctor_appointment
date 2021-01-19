@@ -63,7 +63,7 @@ $i=1;
 			
 			<tr>
       <td><?php echo $i++;?> </td>
- 				<td ><?php  echo $qw[ 'first_name'].'    '.$qw['last_name']; ?> </td>
+ 				<td ><?php  echo $qw[ 'first_name'].'    '.$qw['lname']; ?> </td>
                <td ><?php  echo $qw['address'].'  <br>  '.$qw['email'].'  <br>  '.$qw['phn']; ?> </td>
 			
 				<?php $sr=date('d-m-Y',strtotime($qw['dob'])); ?>

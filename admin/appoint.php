@@ -52,7 +52,7 @@ $i=1;
 <input type="" id="myInput" name="text" class="se" placeholder="search Doctors here.."><th style="padding:10px;margin-left:10px;" ><img style="width:30px;height:30px;" src="../img/se.jpg" ></th><td style="padding:10px">
 		<table  class="newtable" >
 		<tr>
-		<th>SI/No:</th><th>Doctor's </th><th>Patient Name</th><th>Appointment Date</th><th>Appointment Taken</th> <th>Purpose</th>	<th >Consultation Fee</th><th>Status</th>
+		<th>SI/No:</th><th>Doctor's </th><th>Patient Name</th><th>Appointment Taken</th> <th>Appointment Date</th><th>Purpose</th>	<th >Consultation Fee</th><th>Status</th>
 			</tr>
 			<tbody id="myTable">
         <?php  foreach ($ar as $qw) { ?>
@@ -65,7 +65,7 @@ $i=1;
       <td><img style="width:100px;height:100px;border-radius: 50%;" src="<?php echo $qw['doct_img'];?>"><br><?php  echo  $qw[ 'doct_name'].'    '.$qw['last_name']; ?> </td>
 
     
-      <td><?php  echo  $qw[ 'first_name'].'    '.$qw['last_name']; ?></td>
+      <td><?php  echo  $qw[ 'first_name'].'    '.$qw['lname']; ?></td>
       <?php $tr=date('d-m-Y',strtotime($qw['app_take_date'])); ?>
  			        	<td ><?php  echo $tr;?>  </td>
      

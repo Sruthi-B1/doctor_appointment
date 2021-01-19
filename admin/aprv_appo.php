@@ -64,7 +64,7 @@ $i=1;
       <td><?php echo $i++;?> </td>
      
     
-      <td><?php  echo  $qw[ 'first_name'].'    '.$qw['last_name']; ?></td>
+      <td><?php  echo  $qw[ 'first_name'].'    '.$qw['lname']; ?></td>
       <?php $tr=date('d-m-Y',strtotime($qw['app_take_date'])); ?>
  			        	<td ><?php  echo $tr;?>  </td>
      

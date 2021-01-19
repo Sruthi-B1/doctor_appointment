@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2021 at 04:19 AM
+-- Generation Time: Jan 19, 2021 at 03:31 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -43,10 +43,15 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`appo_id`, `doct_id`, `pat_id`, `appo_date`, `app_take_date`, `status`, `purpose`, `token`) VALUES
-(1, 1, 2, '2021-01-21', ' 2021-01-04', 'approved', 'Skin allergy', 1),
-(2, 2, 2, '2021-01-20', ' 2021-01-05', 'approved', 'Surgery', 1),
-(3, 2, 1, '2021-01-21', ' 2021-01-05', 'approved', 'Surgery', 2),
-(4, 1, 1, '2021-01-21', ' 2021-01-05', 'rejected', '	Infectious', 0);
+(1, 2, 2, '2021-01-21', ' 2021-01-10', 'rejected', '', 0),
+(2, 4, 2, '2021-01-21', ' 2021-01-10', 'approved', '', 3),
+(3, 1, 2, '2021-01-22', ' 2021-01-10', 'approved', '', 2),
+(4, 1, 1, '2021-01-22', ' 2021-01-10', 'approved', '', 1),
+(5, 2, 1, '2021-01-21', ' 2021-01-10', 'approved', '', 1),
+(6, 1, 1, '2021-01-21', ' 2021-01-10', 'approved', '', 2),
+(7, 4, 1, '2021-01-22', ' 2021-01-10', 'approved', '', 4),
+(8, 2, 1, '2021-01-22', ' 2021-01-10', 'rejected', '', 0),
+(9, 1, 2, '2021-01-19', ' 2021-01-11', 'approved', '', 1);
 
 -- --------------------------------------------------------
 
@@ -117,7 +122,7 @@ CREATE TABLE `patient` (
   `pat_id` int(11) NOT NULL,
   `logi_id` int(11) NOT NULL,
   `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
   `address` varchar(100) NOT NULL,
   `phn` varchar(200) NOT NULL,
   `email` varchar(500) NOT NULL,
@@ -130,7 +135,7 @@ CREATE TABLE `patient` (
 -- Dumping data for table `patient`
 --
 
-INSERT INTO `patient` (`pat_id`, `logi_id`, `first_name`, `last_name`, `address`, `phn`, `email`, `dob`, `blood`, `gen`) VALUES
+INSERT INTO `patient` (`pat_id`, `logi_id`, `first_name`, `lname`, `address`, `phn`, `email`, `dob`, `blood`, `gen`) VALUES
 (1, 5, 'Praveena', 'Raju', 'Thulasiparabil(H),\r\nThumbolli,\r\nAlappuzha', '9090786756', 'praveena@gmail.com', '2000-02-07', 'O+', 'female'),
 (2, 6, 'Anju', 'Sukumaran', 'Valancheri(H),\r\nMalappuram', '9074321244', 'anju@gmail.com', '2001-08-03', 'A+', 'female');
 
@@ -200,7 +205,7 @@ ALTER TABLE `specilization`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `appo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `appo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `doct`

@@ -72,7 +72,7 @@ h2{
 			
 			<tr>
 				<th style="padding:10px"> Name: </th>
- 				<td style="padding:10px"><?php  echo $qw[ 'first_name'].'    '.$qw['last_name']; ?> </td>
+ 				<td style="padding:10px"><?php  echo $qw[ 'first_name'].'    '.$qw['lname']; ?> </td>
                  </tr>
 				 <tr>
 				<th style="padding:10px">Gender:</th>

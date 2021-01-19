@@ -136,7 +136,7 @@ h1{
      <div class="name2">
      <div class="lab"><label >SurName <font color=red>*</font>:</label>
      </div>
-        <div class="div-text"> <input type="text" name="lname" placeholder="Last Name" required="required" pattern="[a-zA-Z\s]{3,20}" title="Enter the valid  Name!" onfocus="this.placeholder=''"onblur="this.placeholder='Last Name'"   autocomplete="off" value="<?php echo $qw['last_name'];?>" >
+        <div class="div-text"> <input type="text" name="lname" placeholder="Last Name" required="required" pattern="[a-zA-Z\s]{3,20}" title="Enter the valid  Name!" onfocus="this.placeholder=''"onblur="this.placeholder='Last Name'"   autocomplete="off" value="<?php echo $qw['lname'];?>" >
       </div>
       </div>
   </div>
@@ -233,7 +233,7 @@ h1{
 if(isset($_POST['reg'])){
 extract($_POST);
 	
-    $q2="UPDATE `patient` SET `first_name`='$fname',`last_name`='$lname',`address`='$add',`phn`='$phn',`email`='$mail',`dob`='$date',`blood`='$bgroup',`gen`='$gen' WHERE pat_id=$di";
+    $q2="UPDATE `patient` SET `first_name`='$fname',`lname`='$lname',`address`='$add',`phn`='$phn',`email`='$mail',`dob`='$date',`blood`='$bgroup',`gen`='$gen' WHERE pat_id=$di";
 	
   mysqli_query($al,$q2);
   echo "<script>alert('Updated Suscessfully!')</script>";

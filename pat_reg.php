@@ -272,7 +272,7 @@ extract($_POST);
 	values('user','$username','$pass')";
 	mysqli_query($al,$q);
 	$lid=mysqli_insert_id($al);
-	$q2="insert into patient(logi_id,first_name,last_name,address,phn,email,dob,blood,gen) values('$lid','$fname','$lname','$add','$phn','$mail','$date','$bgroup','$gen')";
+	$q2="insert into patient(logi_id,first_name,lname,address,phn,email,dob,blood,gen) values('$lid','$fname','$lname','$add','$phn','$mail','$date','$bgroup','$gen')";
 
   mysqli_query($al,$q2);
   echo "<script>alert('Registerd Suscessfully!')</script>";

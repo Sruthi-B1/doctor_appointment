@@ -45,7 +45,7 @@ h2{
 <?php
     $ii = $_SESSION['ap'];
 
-    $ar=mysqli_query($al, "SELECT * FROM appointment  INNER join patient USING (pat_id) WHERE doct_id=$ii AND status='approved' order by appo_id DESC");
+    $ar=mysqli_query($al, "SELECT * FROM appointment  INNER join patient USING (pat_id) WHERE doct_id=$ii AND status='approved' AND appo_date = CURDATE() order by appo_id DESC");
 $i=1;
 
   ?>
@@ -68,7 +68,7 @@ $i=1;
       <td ><?php  echo $qw['token']; ?> </td>
 
      
-      <td ><?php  echo $qw[ 'first_name'].'    '.$qw['last_name']; ?> </td>
+      <td ><?php  echo $qw[ 'first_name'].'    '.$qw['lname']; ?> </td>
                
       <td ><?php  echo $qw['email'].'  <br>  '.$qw['phn']; ?> </td>
                <?php $sr=date('d-m-Y',strtotime($qw['appo_date'])); ?>

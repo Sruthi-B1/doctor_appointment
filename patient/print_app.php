@@ -113,7 +113,7 @@ a{
      <td><?php  echo $qw['token']; ?></td>
      </tr>
     <th>Patient Name :</th>
-     <td ><?php  echo $qw[ 'first_name'].'    '.$qw['last_name']; ?> </td>
+     <td ><?php  echo $qw[ 'first_name'].'    '.$qw['lname']; ?> </td>
      </tr>
      <tr>
      <th>Gender :</th>

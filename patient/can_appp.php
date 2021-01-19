@@ -45,7 +45,7 @@ h2{
 <?php
     $ii = $_SESSION['ap'];
 
-    $ar=mysqli_query($al, "SELECT * FROM appointment  INNER join doct USING (doct_id) WHERE pat_id=$ii AND status = 'pending' OR status = 'approved' AND  appo_date >= CURDATE()  order by appo_id DESC");
+    $ar=mysqli_query($al, "SELECT * FROM appointment  INNER join doct USING (doct_id) WHERE pat_id=$ii AND appo_date >= CURDATE() AND status != 'rejected' order by appo_id DESC");
 $i=1;
 
   ?>
